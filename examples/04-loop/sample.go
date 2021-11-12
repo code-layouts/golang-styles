@@ -45,4 +45,18 @@ func main() {
 	f.Println("-----------------------------------------")
 	loopContinue()
 
+	numbers := []int{1, 2, 3, 4, 5}
+	for i := range numbers {
+		f.Println(i)
+	}
+	f.Println(numbers)
+
+	capacityUnit := make(map[string]string)
+	capacityUnit["1KB"] = "1024 Byte"
+	capacityUnit["1MB"] = "1024 KB"
+	capacityUnit["1GB"] = "1024 MB"
+	capacityUnit["1TB"] = "1024 GB"
+	for key, result := range capacityUnit {
+		f.Println(key, result)
+	}
 }

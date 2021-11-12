@@ -12,7 +12,6 @@ func ifcondition(num int) {
 	} else {
 		f.Println("잘못 입력 했습니다.")
 	}
-
 }
 
 // switch 조건문 예시
