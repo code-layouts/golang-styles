@@ -2,6 +2,8 @@
 go-lang 반복문 흐름을 제어하는 예제 입니다.
 
 ## Examples
+[sample.go](./sample.go) 소스 코드 참고
+
 for loop
 ```
 for i := 0; i < 5; i++ {
