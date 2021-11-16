@@ -10,6 +10,15 @@ go env
 go version
 ```
 
+## Configuration Profile
+golang 을 위한 사용자 환경 변수를 설정 합니다. (~/.zshrc or ~/.bashrc) 
+```shell
+# golang
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin:$(go env GOBIN)
+```
+
 ## Project-layout
 golang 프로젝트 레이아웃을 참고 합니다.
 [project-layout](https://github.com/golang-standards/project-layout)

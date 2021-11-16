@@ -14,6 +14,11 @@ func slice01() {
 
 }
 
+func RemoveSlice(slice []string, i int) []string {
+	copy(slice[i:], slice[i+1:])
+	return slice[:len(slice)-1]
+}
+
 func slice02() {
 	f.Println("슬라이스에 값을 추가로 지정하고 싶다면 append 함수를 사용합니다.")
 	v := []string{"windows", "unix", "linux"}
@@ -26,13 +31,19 @@ func slice02() {
 	f.Println(v)
 	f.Println("슬라이스의 용량은 배열 크기 대비 미리 정적(대게 배수)으로 할당하므로 메모리 및 성능에 영향을 줍니다.")
 	f.Println("길이 len: ", len(v), " , 용량 cap: ", cap(v))
+	f.Println()
 
+	f.Println("슬라이스에 특정 인덱스의 앨리먼트를 삭제할 수 있습니다.")
+	v = RemoveSlice(v, 2)
+	f.Println(v)
+	f.Println()
 	f.Println("슬라이스에 또다른 슬라이스를 추가할 수 있습니다.")
 	a := []int{1, 2, 3}
 	b := []int{4, 5, 6}
 	a = append(a, b...)
 	a = append(a, []int{7, 8, 9}...)
 	f.Println(a)
+
 }
 
 func map01() {
